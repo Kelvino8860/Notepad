@@ -114,11 +114,9 @@ public class Notepad extends JFrame implements ActionListener{
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
                 String s;
-                jta.setText("");    
-                setCursor(new Cursor(Cursor.WAIT_CURSOR));     
+                jta.setText("");         
                 while((s = reader.readLine()) != null)
                   jta.setText(jta.getText() + s + "\r\n");
-                setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
                 reader.close();
 
                 this.setTitle(fl.getName() + "--Notepad");
@@ -129,7 +127,7 @@ public class Notepad extends JFrame implements ActionListener{
     }
     public void saveFile()
     {
-
+         
     }
     public void exitFile()
     {
